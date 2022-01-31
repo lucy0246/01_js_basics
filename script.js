@@ -42,7 +42,7 @@ document.querySelector("button").addEventListener("click", buttonclicked);
 function buttonclicked() {} */
 
 //  øvelse 5  //
-document.querySelector("button").addEventListener("click", buttonclicked);
+/* document.querySelector("button").addEventListener("click", buttonclicked);
 function buttonclicked() {
   let længde = document.querySelector("#længde").value;
   let bredde = document.querySelector("#bredde").value;
@@ -58,6 +58,29 @@ function buttonclicked() {
   console.log(resultat);
 }
 
-function areal(l, b) {
+function arealet(l, b) {
+  return l * b;
+}
+ */
+
+//  øvelse 6    //
+document.querySelector("button").addEventListener("click", buttonclicked);
+function buttonclicked() {
+  let længde = document.querySelector("#længde").value;
+  let bredde = document.querySelector("#bredde").value;
+  let areal = længde * bredde;
+  let resultat;
+
+  if (isNaN(areal)) {
+    resultat = "dette er ikke et tal. prøv igen";
+  } else if (areal <= 0) {
+    resultat = "tallet er mindre eller lig med 0. prøv igen";
+  } else {
+    resultat = "arealet er " + areal;
+  }
+  console.log(resultat);
+}
+
+function arealet(l, b) {
   return l * b;
 }
